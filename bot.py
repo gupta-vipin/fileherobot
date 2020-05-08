@@ -2,7 +2,6 @@
 import pyrogram
 from pyrogram import Client, Filters, MessageHandler, CallbackQueryHandler,CallbackQuery
 from creds import config
-import asyncio
 import math
 import time
 import requests
@@ -93,8 +92,7 @@ def progress_bar_f(current,total,prev_message,time1,direction):
     #this case when file is downloaded completly... 
     if total==current: 
         txt_to_send=direction+"ed : complete 100% ["+k2+"]\n"+k3+pro_bar_str
-        txt_to_send=txt_to_send+"\nAvg. Transfer Speed :"+k4
-        await asyncio.sleep(5)
+        txt_to_send=txt_to_send+"\nAvg. Transfer Speed :"+k4+ps
         prev_message=app.edit_message_text(
             chat_id=prev_message.chat.id,
             message_id=prev_message.message_id,
@@ -104,8 +102,7 @@ def progress_bar_f(current,total,prev_message,time1,direction):
     #this else case is when file is currently in downloading state
     else:
         txt_to_send=direction+"ing : "+k1+"/"+k2+"\n"+k3+pro_bar_str
-        txt_to_send=txt_to_send+"\nTransfer Speed :"+k4
-        await asyncio.sleep(5)
+        txt_to_send=txt_to_send+"\nTransfer Speed :"+k4+ps
         prev_message=app.edit_message_text(
             chat_id=prev_message.chat.id, 
             message_id=prev_message.message_id,
