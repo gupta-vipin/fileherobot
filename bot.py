@@ -93,6 +93,7 @@ def progress_bar_f(current,total,prev_message,time1,direction):
     if total==current: 
         txt_to_send=direction+"ed : complete 100% ["+k2+"]\n"+k3+pro_bar_str
         txt_to_send=txt_to_send+"\nAvg. Transfer Speed :"+k4
+        await asyncio.sleep(5)
         prev_message=app.edit_message_text(
             chat_id=prev_message.chat.id,
             message_id=prev_message.message_id,
@@ -103,6 +104,7 @@ def progress_bar_f(current,total,prev_message,time1,direction):
     else:
         txt_to_send=direction+"ing : "+k1+"/"+k2+"\n"+k3+pro_bar_str
         txt_to_send=txt_to_send+"\nTransfer Speed :"+k4
+        await asyncio.sleep(5)
         prev_message=app.edit_message_text(
             chat_id=prev_message.chat.id, 
             message_id=prev_message.message_id,
