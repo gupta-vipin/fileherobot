@@ -112,7 +112,6 @@ def progress_bar_f(current,total,prev_message,time1,direction):
             text=txt_to_send,
             parse_mode="html"
         )
-        await asyncio.sleep(EDIT_TIME)
         
 
 
