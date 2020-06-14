@@ -101,9 +101,7 @@ def progress_bar_f(current,total,prev_message,time1,direction):
             message_id=prev_message.message_id,
             text=txt_to_send,
             parse_mode="html"
-        )
-        await asyncio.sleep(EDIT_TIME)
-        
+        )        
     #this else case is when file is currently in downloading state
     else:
         txt_to_send=direction+"ing : "+k1+"/"+k2+"\n"+k3+pro_bar_str
