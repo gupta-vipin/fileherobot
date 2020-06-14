@@ -61,7 +61,6 @@ def upload_video(client, message,file_path):
         text="Starting Upload.....",
         chat_id=message.chat.id,
         reply_to_message_id=message.message_id
-        await asyncio.sleep(3)
     )
     direction="upload"
     time1 = time.time()
@@ -69,7 +68,7 @@ def upload_video(client, message,file_path):
         chat_id=message.chat.id,
         video=file_path,
         reply_to_message_id=message.message_id,
-        caption="Uploaded by @urlboybot",
+        caption="Uploaded by @vipingupta_1",
         progress=progress_bar_f,
         progress_args=(prev_message,time1,direction),
         thumb=file_path_thumb
