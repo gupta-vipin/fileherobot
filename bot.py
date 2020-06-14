@@ -134,7 +134,6 @@ def file_handler(client,message):
         text="Starting Download file .. ",
         chat_id=message.chat.id,
         reply_to_message_id=message.message_id
-        await asyncio.sleep(3)
     )
     direction="Download"
     time1=time.time()
