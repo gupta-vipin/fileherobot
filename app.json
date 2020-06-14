@@ -28,6 +28,11 @@
     "API_HASH": {
       "description": "This is telegram App API_HASH - Get from my.telegram.org",
       "value": ""
-    }
+    },
+    "EDIT_TIMW": {
+      "description": "Delay between message edit",
+      "value": ""
+    },
+    
   }
 }
