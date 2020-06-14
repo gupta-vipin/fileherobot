@@ -102,11 +102,12 @@ def progress_bar_f(current,total,prev_message,time1,direction):
             text=txt_to_send,
             parse_mode="html"
         )
+        await asyncio.sleep(EDIT_TIME)
+        
     #this else case is when file is currently in downloading state
     else:
         txt_to_send=direction+"ing : "+k1+"/"+k2+"\n"+k3+pro_bar_str
         txt_to_send=txt_to_send+"\nTransfer Speed :"+k4+ps
-        await asyncio.sleep(3)
         prev_message=app.edit_message_text(
             chat_id=prev_message.chat.id, 
             message_id=prev_message.message_id,
